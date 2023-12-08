@@ -1,0 +1,77 @@
+@import "variaveis.less";
+@import "maps.less";
+
+@breakPointMobile: ~ "(max-width: 767px)";
+@breakPointTablet: ~ "(min-width: 767px) and (max-width: 1023px)";
+
+body {
+    background-color: #colors[backgroundColor];
+    color: @corDosTextos;
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media @breakPointMobile {
+        max-width: 70%;
+    }
+
+    @media @breakPointTablet {
+        max-width: 80%;
+    }
+}
+
+
+Header {
+    padding: 2.5rem;
+
+    .profile-avatar {
+        display: block;
+        margin: 0 auto 2.5rem;
+        border-radius: 50%;
+    }
+    
+}
+
+.profile-bio {
+    text-align: center;
+
+    &-name {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    &-subtitle {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    &-description {
+        font-size: 14px;
+        opacity: .7;
+    }
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-between;
+    max-width: 240px;
+    width: 100%;
+    margin: 0 auto;
+
+    li {
+        list-style-type: none;
+
+        img {
+            transition: all ease .3s;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+}
+
+
